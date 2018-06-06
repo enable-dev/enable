@@ -1,0 +1,23 @@
+﻿$PBExportHeader$str_rs_reportparm.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_rs_reportparm from structure
+                     long                           report_id
+               long                                                   parameter_id
+                              boolean                                       enabled
+            string                                       description
+            unsignedlong                                    sort
+                              string                                                datatype
+                        boolean                                 optional
+                     boolean                              multiplevalues
+               string                              valuedef
+                  string                                                valuemin
+   string            valuemax
+         string                                                         valuecase
+         boolean                           valuepassword
+   string                        valuemask
+         long                  valuetable_id
+            long                                       valuefield_id
+               any                  values[]
+                  string               valuestrings[]
+end type                        
+

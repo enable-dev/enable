@@ -1,0 +1,9 @@
+﻿$PBExportHeader$xby08qjdhvd44rhhshx1.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xby08qjdhvd44rhhshx1 from structure
+                           long                                    left
+               long                           top
+                        long                                       right
+      long                        bottom
+end type                        
+

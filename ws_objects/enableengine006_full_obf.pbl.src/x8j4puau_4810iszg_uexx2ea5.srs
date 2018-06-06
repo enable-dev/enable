@@ -1,0 +1,23 @@
+﻿$PBExportHeader$x8j4puau_4810iszg_uexx2ea5.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type x8j4puau_4810iszg_uexx2ea5 from structure
+                           long                                    cb
+               string                           lpreserved
+                        string                                       lpdesktop
+      string                        lptitle
+                        long                           dwx
+            long                                       dwy
+               long                              dwxsize
+               long                              dwysize
+   long                           dwxcountchars
+               long                                 dwycountchars
+                           long                        dwfillattribute
+                  long                                                      dwflags
+            long                                    wshowwindow
+                     long                           cbreserved2
+      long                                       lpreserved2
+         long                        hstdinput
+         long                     hstdoutput
+                        long                                                   hstderror
+end type      
+

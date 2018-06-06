@@ -1,0 +1,27 @@
+﻿$PBExportHeader$x2gn_3bjpbj9etmcfs6h5qct9bemy.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type x2gn_3bjpbj9etmcfs6h5qct9bemy from function_object
+end type               
+
+forward prototypes
+global function string x2gn_3bjpbj9etmcfs6h5qct9bemy (string xcc4bib9rynrg8zgw5egjp, string x0qe7zei2_511vhi03fp1x_ddtxgezm)
+end prototypes                              
+
+global function string x2gn_3bjpbj9etmcfs6h5qct9bemy (string xcc4bib9rynrg8zgw5egjp, string x0qe7zei2_511vhi03fp1x_ddtxgezm);string xktbdeb5dsthzz = ""                           
+
+n_enable x5127gfpp_qm5tuyf
+if isvalid(n_enable) then
+      x5127gfpp_qm5tuyf = n_enable
+elseif isvalid(n_cs_engine) then
+   x5127gfpp_qm5tuyf = n_cs_engine
+else
+                           x5127gfpp_qm5tuyf = n_rs_engine
+end if
+if isvalid(x5127gfpp_qm5tuyf) then
+   if isvalid(x5127gfpp_qm5tuyf.x6r139cb3hva1bzjq35jp8yq()) then
+                                                   xktbdeb5dsthzz = x5127gfpp_qm5tuyf.x6r139cb3hva1bzjq35jp8yq().translate_computed(xcc4bib9rynrg8zgw5egjp, x0qe7zei2_511vhi03fp1x_ddtxgezm)
+               end if
+end if            
+return xktbdeb5dsthzz                     
+end function   
+

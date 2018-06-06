@@ -1,0 +1,10 @@
+﻿$PBExportHeader$xj83ecii0tbt0857z7lm8ulc.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xj83ecii0tbt0857z7lm8ulc from structure
+                              integer                                                         bftype
+   long                              bfsize
+   integer                                                   bfreserved1
+                        integer                                 bfreserved2
+                     long                     bfoffbits
+end type               
+

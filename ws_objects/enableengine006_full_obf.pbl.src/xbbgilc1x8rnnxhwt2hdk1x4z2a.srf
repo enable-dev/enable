@@ -1,0 +1,19 @@
+﻿$PBExportHeader$xbbgilc1x8rnnxhwt2hdk1x4z2a.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xbbgilc1x8rnnxhwt2hdk1x4z2a from function_object
+end type                  
+
+forward prototypes
+global function unsignedlong xbbgilc1x8rnnxhwt2hdk1x4z2a (unsignedlong x08x0rn1u2n5l8emdmqcksnc4g, unsignedlong x0plf8jxndji_8yb2ijn_g937grqxqx)
+end prototypes                           
+
+global function unsignedlong xbbgilc1x8rnnxhwt2hdk1x4z2a (unsignedlong x08x0rn1u2n5l8emdmqcksnc4g, unsignedlong x0plf8jxndji_8yb2ijn_g937grqxqx);ulong xv3q3n89quk_nfkfuq9d631w4578a = 0
+integer li_i
+For li_i = 0 To 31
+                           If Mod(long(x08x0rn1u2n5l8emdmqcksnc4g/ 2^li_i), 2) + Mod(long(x0plf8jxndji_8yb2ijn_g937grqxqx/ 2^li_i), 2) = 2 Then
+               xv3q3n89quk_nfkfuq9d631w4578a += 2^li_i
+            End If
+Next                  
+return xv3q3n89quk_nfkfuq9d631w4578a
+end function            
+

@@ -1,0 +1,19 @@
+﻿$PBExportHeader$xgk0ycbesf54ge_0q6zjhak_w76.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xgk0ycbesf54ge_0q6zjhak_w76 from function_object
+end type                              
+
+forward prototypes
+global function string xgk0ycbesf54ge_0q6zjhak_w76 (string xutjk787t6apizk9bsh5e01z3t, string xb6p15pc7sya, string xfqnskeayc63lkdlis3yl)
+end prototypes      
+
+global function string xgk0ycbesf54ge_0q6zjhak_w76 (string xutjk787t6apizk9bsh5e01z3t, string xb6p15pc7sya, string xfqnskeayc63lkdlis3yl);string x0w0hsdax44_gcgjukvz6ec9w_qx8
+x2u9d41bylwusyywzlk xkje956lf8zjag6mi08icwuyq1tb               
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[1] = xutjk787t6apizk9bsh5e01z3t
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[2] = xb6p15pc7sya
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[3] = xfqnskeayc63lkdlis3yl            
+OpenWithParm(xxkscmdanfk_18jqduyw, xkje956lf8zjag6mi08icwuyq1tb)
+x0w0hsdax44_gcgjukvz6ec9w_qx8 = Message.StringParm                           
+return x0w0hsdax44_gcgjukvz6ec9w_qx8
+end function                  
+

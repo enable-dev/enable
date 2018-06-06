@@ -1,0 +1,29 @@
+﻿$PBExportHeader$str_db_field_attr.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_db_field_attr from structure
+                           unsignedlong                                    field_id
+               unsignedlong                           table_id
+                        string                                       tableowner
+      string                        tablecode
+                        string                           tabledescription
+            string                                       code
+               string                              description
+               unsignedlong                              sort
+   boolean                           required
+               unsignedlong                                 pknum
+                           unsignedlong                        reprnum
+                  string                                                      fieldtype
+            string                                    domain
+                     string                           hint
+      string                                       notes
+         unsignedlong                        fktableid
+         unsignedlong                     fktablepk
+                        string                                                   default
+      string                                    initial
+                              string            valrule
+                        string                        valmsg
+                           string                                                   validvalues
+         boolean                                 hide
+                              unsignedlong                                                   field_group_id
+end type                  
+

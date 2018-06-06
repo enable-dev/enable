@@ -1,0 +1,1418 @@
+﻿$PBExportHeader$xt1b9609yp6c4_srnxqry.srm
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+forward
+global type xt1b9609yp6c4_srnxqry from menu
+end type
+type m_file from menu within xt1b9609yp6c4_srnxqry
+end type
+type m_togglebreakpoint from menu within m_file
+end type
+type m_setfont from menu within m_file
+end type
+type m_setcodepage from menu within m_file
+end type
+type m_default from menu within m_setcodepage
+end type
+type m_unicodeutf8 from menu within m_setcodepage
+end type
+type m_simplifiedchinese from menu within m_setcodepage
+end type
+type m_traditionalchinese from menu within m_setcodepage
+end type
+type m_japaneseshiftjis from menu within m_setcodepage
+end type
+type m_koreanunified from menu within m_setcodepage
+end type
+type m_koreanjohab from menu within m_setcodepage
+end type
+type m_setcodepage from menu within m_file
+m_default m_default
+m_unicodeutf8 m_unicodeutf8
+m_simplifiedchinese m_simplifiedchinese
+m_traditionalchinese m_traditionalchinese
+m_japaneseshiftjis m_japaneseshiftjis
+m_koreanunified m_koreanunified
+m_koreanjohab m_koreanjohab
+end type
+type m_1 from menu within m_file
+end type
+type m_closescriptviewer from menu within m_file
+end type
+type m_file from menu within xt1b9609yp6c4_srnxqry
+m_togglebreakpoint m_togglebreakpoint
+m_setfont m_setfont
+m_setcodepage m_setcodepage
+m_1 m_1
+m_closescriptviewer m_closescriptviewer
+end type
+type m_edit from menu within xt1b9609yp6c4_srnxqry
+end type
+type m_undo from menu within m_edit
+end type
+type m_redo from menu within m_edit
+end type
+type m_2 from menu within m_edit
+end type
+type m_cut from menu within m_edit
+end type
+type m_copy from menu within m_edit
+end type
+type m_paste from menu within m_edit
+end type
+type m_delete from menu within m_edit
+end type
+type m_3 from menu within m_edit
+end type
+type m_selectall from menu within m_edit
+end type
+type m_5 from menu within m_edit
+end type
+type m_commentselection from menu within m_edit
+end type
+type m_uncommentselection from menu within m_edit
+end type
+type m_4 from menu within m_edit
+end type
+type m_find from menu within m_edit
+end type
+type m_findnext from menu within m_edit
+end type
+type m_replace from menu within m_edit
+end type
+type m_edit from menu within xt1b9609yp6c4_srnxqry
+m_undo m_undo
+m_redo m_redo
+m_2 m_2
+m_cut m_cut
+m_copy m_copy
+m_paste m_paste
+m_delete m_delete
+m_3 m_3
+m_selectall m_selectall
+m_5 m_5
+m_commentselection m_commentselection
+m_uncommentselection m_uncommentselection
+m_4 m_4
+m_find m_find
+m_findnext m_findnext
+m_replace m_replace
+end type
+type m_0 from menu within xt1b9609yp6c4_srnxqry
+end type
+type m_about from menu within m_0
+end type
+type m_0 from menu within xt1b9609yp6c4_srnxqry
+m_about m_about
+end type
+global type xt1b9609yp6c4_srnxqry from menu
+m_file m_file
+m_edit m_edit
+m_0 m_0
+end type
+end forward                     
+
+global type xt1b9609yp6c4_srnxqry from menu
+m_file m_file
+m_edit m_edit
+m_0 m_0
+end type
+global xt1b9609yp6c4_srnxqry xt1b9609yp6c4_srnxqry         
+
+type variables
+protected:
+long il_codepage
+end variables   
+
+forward prototypes
+public subroutine mf_editstatus (boolean xz8eef5yscr776eyj7k_, boolean ab_cancopy, boolean ab_canpaste, boolean ab_canredo, boolean ab_canundo, long al_textlen)
+public subroutine xy2d88xvx3e6up0dqekcsy (long x_3slfu_emwf)
+public function long of_getcodepage ()
+end prototypes                              
+
+public subroutine mf_editstatus (boolean xz8eef5yscr776eyj7k_, boolean ab_cancopy, boolean ab_canpaste, boolean ab_canredo, boolean ab_canundo, long al_textlen);               
+this.m_edit.m_undo.enabled                           = ab_canundo
+this.m_edit.m_redo.enabled                     = ab_canredo
+this.m_edit.m_cut.enabled                              = ab_cancopy and not xz8eef5yscr776eyj7k_
+this.m_edit.m_copy.enabled                     = ab_cancopy
+this.m_edit.m_paste.enabled                              = ab_canpaste and not xz8eef5yscr776eyj7k_
+this.m_edit.m_delete.enabled   = ab_cancopy and not xz8eef5yscr776eyj7k_            
+this.m_edit.m_commentselection.enabled   = ab_cancopy and not xz8eef5yscr776eyj7k_
+this.m_edit.m_uncommentselection.enabled = ab_cancopy and not xz8eef5yscr776eyj7k_                              
+If al_textlen = 0 Then
+               this.m_edit.m_selectall.enabled = False
+                  this.m_edit.m_find.enabled = False
+                  this.m_edit.m_findnext.enabled = False
+   this.m_edit.m_replace.enabled = False
+Else
+   this.m_edit.m_selectall.enabled = True
+            this.m_edit.m_find.enabled = True
+                     this.m_edit.m_findnext.enabled = True
+                  this.m_edit.m_replace.enabled = True
+End If                           
+end subroutine                           
+
+public subroutine xy2d88xvx3e6up0dqekcsy (long x_3slfu_emwf);il_codepage = x_3slfu_emwf                              
+THIS.m_file.m_setcodepage.m_default.checked=false
+THIS.m_file.m_setcodepage.m_unicodeutf8.checked=false
+THIS.m_file.m_setcodepage.m_simplifiedchinese.checked=false
+THIS.m_file.m_setcodepage.m_traditionalchinese.checked=false
+THIS.m_file.m_setcodepage.m_japaneseshiftjis.checked=false
+THIS.m_file.m_setcodepage.m_koreanunified.checked=false
+THIS.m_file.m_setcodepage.m_koreanjohab.checked=false                  
+choose case x_3slfu_emwf
+                  case 65001
+                                       THIS.m_file.m_setcodepage.m_unicodeutf8.checked = true
+                        case 936
+                           THIS.m_file.m_setcodepage.m_simplifiedchinese.checked = true
+                              case 950
+               THIS.m_file.m_setcodepage.m_traditionalchinese.checked = true
+         case 932
+                                                   THIS.m_file.m_setcodepage.m_japaneseshiftjis.checked = true
+            case 949
+                                 THIS.m_file.m_setcodepage.m_koreanunified.checked = true
+               case 1361
+               THIS.m_file.m_setcodepage.m_koreanjohab.checked = true
+                     case else
+            THIS.m_file.m_setcodepage.m_default.checked = true
+end choose               
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7("m_setcodepage")      
+end subroutine         
+
+public function long of_getcodepage ();return il_codepage   
+end function                     
+
+on xt1b9609yp6c4_srnxqry.create
+xt1b9609yp6c4_srnxqry=this
+call super::create
+this.text = "m_main"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_file=create m_file
+this.m_edit=create m_edit
+this.m_0=create m_0
+this.Item[UpperBound(this.Item)+1]=this.m_file
+this.Item[UpperBound(this.Item)+1]=this.m_edit
+this.Item[UpperBound(this.Item)+1]=this.m_0
+end on                  
+
+on xt1b9609yp6c4_srnxqry.destroy
+call super::destroy
+destroy(this.m_file)
+destroy(this.m_edit)
+destroy(this.m_0)
+end on                  
+
+type m_file from menu within xt1b9609yp6c4_srnxqry
+m_togglebreakpoint m_togglebreakpoint
+m_setfont m_setfont
+m_setcodepage m_setcodepage
+m_1 m_1
+m_closescriptviewer m_closescriptviewer
+end type      
+
+on m_file.create
+call super::create
+this.text = "&File"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_togglebreakpoint=create m_togglebreakpoint
+this.m_setfont=create m_setfont
+this.m_setcodepage=create m_setcodepage
+this.m_1=create m_1
+this.m_closescriptviewer=create m_closescriptviewer
+this.Item[UpperBound(this.Item)+1]=this.m_togglebreakpoint
+this.Item[UpperBound(this.Item)+1]=this.m_setfont
+this.Item[UpperBound(this.Item)+1]=this.m_setcodepage
+this.Item[UpperBound(this.Item)+1]=this.m_1
+this.Item[UpperBound(this.Item)+1]=this.m_closescriptviewer
+end on                        
+
+on m_file.destroy
+call super::destroy
+destroy(this.m_togglebreakpoint)
+destroy(this.m_setfont)
+destroy(this.m_setcodepage)
+destroy(this.m_1)
+destroy(this.m_closescriptviewer)
+end on   
+
+type m_togglebreakpoint from menu within m_file
+end type                     
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())         
+end event                              
+
+on m_togglebreakpoint.create
+call super::create
+this.text = "Toggle Breakpoint~tF2"
+this.shortcut = 113
+this.toolbaritemname = "stopdebugging!"
+this.toolbaritemtext = "Toggle"
+this.menuimage = "StopDebugging!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on   
+
+on m_togglebreakpoint.destroy
+call super::destroy
+end on            
+
+type m_setfont from menu within m_file
+end type                           
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())         
+end event                  
+
+on m_setfont.create
+call super::create
+this.text = "Set font..."
+this.microhelp = "Choose a font for the editor"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on               
+
+on m_setfont.destroy
+call super::destroy
+end on               
+
+type m_setcodepage from menu within m_file
+m_default m_default
+m_unicodeutf8 m_unicodeutf8
+m_simplifiedchinese m_simplifiedchinese
+m_traditionalchinese m_traditionalchinese
+m_japaneseshiftjis m_japaneseshiftjis
+m_koreanunified m_koreanunified
+m_koreanjohab m_koreanjohab
+end type                     
+
+on m_setcodepage.create
+call super::create
+this.visible = false
+this.text = "Set codepage"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_default=create m_default
+this.m_unicodeutf8=create m_unicodeutf8
+this.m_simplifiedchinese=create m_simplifiedchinese
+this.m_traditionalchinese=create m_traditionalchinese
+this.m_japaneseshiftjis=create m_japaneseshiftjis
+this.m_koreanunified=create m_koreanunified
+this.m_koreanjohab=create m_koreanjohab
+this.Item[UpperBound(this.Item)+1]=this.m_default
+this.Item[UpperBound(this.Item)+1]=this.m_unicodeutf8
+this.Item[UpperBound(this.Item)+1]=this.m_simplifiedchinese
+this.Item[UpperBound(this.Item)+1]=this.m_traditionalchinese
+this.Item[UpperBound(this.Item)+1]=this.m_japaneseshiftjis
+this.Item[UpperBound(this.Item)+1]=this.m_koreanunified
+this.Item[UpperBound(this.Item)+1]=this.m_koreanjohab
+end on         
+
+on m_setcodepage.destroy
+call super::destroy
+destroy(this.m_default)
+destroy(this.m_unicodeutf8)
+destroy(this.m_simplifiedchinese)
+destroy(this.m_traditionalchinese)
+destroy(this.m_japaneseshiftjis)
+destroy(this.m_koreanunified)
+destroy(this.m_koreanjohab)
+end on                     
+
+type m_default from menu within m_setcodepage
+end type      
+
+on m_default.create
+call super::create
+this.text = "Default"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on            
+
+on m_default.destroy
+call super::destroy
+end on      
+
+event clicked;xy2d88xvx3e6up0dqekcsy(0)               
+end event            
+
+type m_unicodeutf8 from menu within m_setcodepage
+end type                           
+
+on m_unicodeutf8.create
+call super::create
+this.text = "Unicode UTF-8"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on         
+
+on m_unicodeutf8.destroy
+call super::destroy
+end on            
+
+event clicked;xy2d88xvx3e6up0dqekcsy(65001)                              
+end event                           
+
+type m_simplifiedchinese from menu within m_setcodepage
+end type   
+
+on m_simplifiedchinese.create
+call super::create
+this.text = "Simplified Chinese (936)"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on            
+
+on m_simplifiedchinese.destroy
+call super::destroy
+end on                           
+
+event clicked;xy2d88xvx3e6up0dqekcsy(936)         
+end event                           
+
+type m_traditionalchinese from menu within m_setcodepage
+end type                  
+
+on m_traditionalchinese.create
+call super::create
+this.text = "Traditional Chinese (950)"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                              
+
+on m_traditionalchinese.destroy
+call super::destroy
+end on   
+
+event clicked;xy2d88xvx3e6up0dqekcsy(950)                     
+end event                           
+
+type m_japaneseshiftjis from menu within m_setcodepage
+end type            
+
+on m_japaneseshiftjis.create
+call super::create
+this.text = "Japanese Shift-JIS (932)"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on               
+
+on m_japaneseshiftjis.destroy
+call super::destroy
+end on                           
+
+event clicked;xy2d88xvx3e6up0dqekcsy(932)                        
+end event            
+
+type m_koreanunified from menu within m_setcodepage
+end type                     
+
+on m_koreanunified.create
+call super::create
+this.text = "Korean Unified Hangul Code (949)"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on         
+
+on m_koreanunified.destroy
+call super::destroy
+end on               
+
+event clicked;xy2d88xvx3e6up0dqekcsy(949)                           
+end event                        
+
+type m_koreanjohab from menu within m_setcodepage
+end type                     
+
+on m_koreanjohab.create
+call super::create
+this.visible = false
+this.text = "Korean Johab (1361)"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                           
+
+on m_koreanjohab.destroy
+call super::destroy
+end on               
+
+event clicked;xy2d88xvx3e6up0dqekcsy(1361)      
+end event         
+
+type m_1 from menu within m_file
+end type         
+
+on m_1.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                        
+
+on m_1.destroy
+call super::destroy
+end on   
+
+type m_closescriptviewer from menu within m_file
+end type                  
+
+event clicked;         
+Close(ParentWindow)                        
+
+end event                  
+
+on m_closescriptviewer.create
+call super::create
+this.text = "Close Script Viewer"
+this.toolbaritemname = "exit!"
+this.toolbaritemtext = "Close"
+this.toolbaritemorder = 2
+this.menuimage = "Exit!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on               
+
+on m_closescriptviewer.destroy
+call super::destroy
+end on                        
+
+type m_edit from menu within xt1b9609yp6c4_srnxqry
+m_undo m_undo
+m_redo m_redo
+m_2 m_2
+m_cut m_cut
+m_copy m_copy
+m_paste m_paste
+m_delete m_delete
+m_3 m_3
+m_selectall m_selectall
+m_5 m_5
+m_commentselection m_commentselection
+m_uncommentselection m_uncommentselection
+m_4 m_4
+m_find m_find
+m_findnext m_findnext
+m_replace m_replace
+end type               
+
+on m_edit.create
+call super::create
+this.text = "&Edit"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_undo=create m_undo
+this.m_redo=create m_redo
+this.m_2=create m_2
+this.m_cut=create m_cut
+this.m_copy=create m_copy
+this.m_paste=create m_paste
+this.m_delete=create m_delete
+this.m_3=create m_3
+this.m_selectall=create m_selectall
+this.m_5=create m_5
+this.m_commentselection=create m_commentselection
+this.m_uncommentselection=create m_uncommentselection
+this.m_4=create m_4
+this.m_find=create m_find
+this.m_findnext=create m_findnext
+this.m_replace=create m_replace
+this.Item[UpperBound(this.Item)+1]=this.m_undo
+this.Item[UpperBound(this.Item)+1]=this.m_redo
+this.Item[UpperBound(this.Item)+1]=this.m_2
+this.Item[UpperBound(this.Item)+1]=this.m_cut
+this.Item[UpperBound(this.Item)+1]=this.m_copy
+this.Item[UpperBound(this.Item)+1]=this.m_paste
+this.Item[UpperBound(this.Item)+1]=this.m_delete
+this.Item[UpperBound(this.Item)+1]=this.m_3
+this.Item[UpperBound(this.Item)+1]=this.m_selectall
+this.Item[UpperBound(this.Item)+1]=this.m_5
+this.Item[UpperBound(this.Item)+1]=this.m_commentselection
+this.Item[UpperBound(this.Item)+1]=this.m_uncommentselection
+this.Item[UpperBound(this.Item)+1]=this.m_4
+this.Item[UpperBound(this.Item)+1]=this.m_find
+this.Item[UpperBound(this.Item)+1]=this.m_findnext
+this.Item[UpperBound(this.Item)+1]=this.m_replace
+end on                  
+
+on m_edit.destroy
+call super::destroy
+destroy(this.m_undo)
+destroy(this.m_redo)
+destroy(this.m_2)
+destroy(this.m_cut)
+destroy(this.m_copy)
+destroy(this.m_paste)
+destroy(this.m_delete)
+destroy(this.m_3)
+destroy(this.m_selectall)
+destroy(this.m_5)
+destroy(this.m_commentselection)
+destroy(this.m_uncommentselection)
+destroy(this.m_4)
+destroy(this.m_find)
+destroy(this.m_findnext)
+destroy(this.m_replace)
+end on            
+
+type m_undo from menu within m_edit
+end type                              
+
+on m_undo.create
+call super::create
+this.text = "Undo~tCtrl+Z"
+this.shortcut = 346
+this.microhelp = "Undo last command"
+this.toolbaritemname = "undo!"
+this.toolbaritemtext = "Undo,Undo last command"
+this.menuimage = "Undo!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                              
+
+on m_undo.destroy
+call super::destroy
+end on            
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                  
+end event                     
+
+type m_redo from menu within m_edit
+end type                  
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                              
+end event                           
+
+on m_redo.create
+call super::create
+this.text = "Redo~tCtrl+R"
+this.shortcut = 338
+this.microhelp = "Redo the last undone command"
+this.toolbaritemname = "redo!"
+this.toolbaritemtext = "Redo,Redo the last undone command"
+this.menuimage = "Redo!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on            
+
+on m_redo.destroy
+call super::destroy
+end on         
+
+type m_2 from menu within m_edit
+end type            
+
+on m_2.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                        
+
+on m_2.destroy
+call super::destroy
+end on         
+
+type m_cut from menu within m_edit
+end type            
+
+on m_cut.create
+call super::create
+this.text = "Cut~tCtrl+X"
+this.shortcut = 344
+this.microhelp = "Cut selected to clipboard"
+this.toolbaritemname = "cut!"
+this.toolbaritemtext = "Cut,Cut selected to clipboard"
+this.menuimage = "Cut!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on   
+
+on m_cut.destroy
+call super::destroy
+end on                     
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())               
+end event                        
+
+type m_copy from menu within m_edit
+end type                              
+
+on m_copy.create
+call super::create
+this.text = "Copy~tCtrl+C"
+this.shortcut = 323
+this.microhelp = "Copy selected to clipboard"
+this.toolbaritemname = "copy!"
+this.toolbaritemtext = "Copy,Copy selected to clipboard"
+this.menuimage = "Copy!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                           
+
+on m_copy.destroy
+call super::destroy
+end on      
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                        
+end event         
+
+type m_paste from menu within m_edit
+end type                  
+
+on m_paste.create
+call super::create
+this.text = "Paste~tCtrl+V"
+this.shortcut = 342
+this.microhelp = "Paste from clipboard"
+this.toolbaritemname = "paste!"
+this.toolbaritemtext = "Paste,Paste from clipboard"
+this.menuimage = "Paste!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                        
+
+on m_paste.destroy
+call super::destroy
+end on                           
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                           
+end event                  
+
+type m_delete from menu within m_edit
+end type                           
+
+on m_delete.create
+call super::create
+this.text = "Delete"
+this.microhelp = "Delete selected"
+this.toolbaritemname = "clear!"
+this.toolbaritemtext = "Delete,Delete selected"
+this.menuimage = "Clear!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on      
+
+on m_delete.destroy
+call super::destroy
+end on      
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                  
+end event                  
+
+type m_3 from menu within m_edit
+end type      
+
+on m_3.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                           
+
+on m_3.destroy
+call super::destroy
+end on      
+
+type m_selectall from menu within m_edit
+end type                              
+
+on m_selectall.create
+call super::create
+this.text = "Select All"
+this.microhelp = "Select all"
+this.toolbaritemname = "selectall!"
+this.toolbaritemtext = "Select All,Select all"
+this.menuimage = "SelectAll!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                        
+
+on m_selectall.destroy
+call super::destroy
+end on                     
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                        
+end event                  
+
+type m_5 from menu within m_edit
+end type               
+
+on m_5.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                        
+
+on m_5.destroy
+call super::destroy
+end on                  
+
+type m_commentselection from menu within m_edit
+end type         
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())               
+end event         
+
+on m_commentselection.create
+call super::create
+this.text = "Comment Selection"
+this.microhelp = "Comment the selected lines"
+this.toolbaritemname = "comment!"
+this.toolbaritemtext = "Comment,Comment the selected lines"
+this.menuimage = "Comment!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on         
+
+on m_commentselection.destroy
+call super::destroy
+end on                        
+
+type m_uncommentselection from menu within m_edit
+end type                     
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                              
+end event                           
+
+on m_uncommentselection.create
+call super::create
+this.text = "Uncomment Selection"
+this.microhelp = "Uncomment the selected lines"
+this.toolbaritemname = "uncomment!"
+this.toolbaritemtext = "Uncomment,Uncomment the selected lines"
+this.menuimage = "Uncomment!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on               
+
+on m_uncommentselection.destroy
+call super::destroy
+end on            
+
+type m_4 from menu within m_edit
+end type                  
+
+on m_4.create
+call super::create
+this.visible = false
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                              
+
+on m_4.destroy
+call super::destroy
+end on               
+
+type m_find from menu within m_edit
+end type                        
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())         
+end event                  
+
+on m_find.create
+call super::create
+this.visible = false
+this.text = "Find...~tCtrl+F"
+this.shortcut = 326
+this.microhelp = "Find text"
+this.toolbaritemname = "find!"
+this.toolbaritemtext = "Find,Find text"
+this.menuimage = "Search!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on      
+
+on m_find.destroy
+call super::destroy
+end on      
+
+type m_findnext from menu within m_edit
+end type      
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                     
+end event               
+
+on m_findnext.create
+call super::create
+this.visible = false
+this.text = "Find Next~tF3"
+this.shortcut = 114
+this.microhelp = "Find next occurrence of text"
+this.toolbaritemname = "findnext!"
+this.toolbaritemtext = "Find Next,Find next occurrence of text"
+this.menuimage = "FindNext!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                     
+
+on m_findnext.destroy
+call super::destroy
+end on            
+
+type m_replace from menu within m_edit
+end type                              
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                     
+end event         
+
+on m_replace.create
+call super::create
+this.visible = false
+this.text = "Replace..."
+this.microhelp = "Replace text"
+this.toolbaritemname = "replace!"
+this.toolbaritemtext = "Replace,Replace text"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on   
+
+on m_replace.destroy
+call super::destroy
+end on            
+
+type m_0 from menu within xt1b9609yp6c4_srnxqry
+m_about m_about
+end type   
+
+on m_0.create
+call super::create
+this.text = "?"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_about=create m_about
+this.Item[UpperBound(this.Item)+1]=this.m_about
+end on      
+
+on m_0.destroy
+call super::destroy
+destroy(this.m_about)
+end on      
+
+type m_about from menu within m_0
+end type   
+
+on m_about.create
+call super::create
+this.text = "About..."
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbarstyle = contemporarytoolbar!
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                           
+
+on m_about.destroy
+call super::destroy
+end on                  
+
+event clicked;
+ParentWindow.Dynamic Function x60t16i2afzz816nfjdtxmvlsyet7(this.ClassName())                     
+end event      
+

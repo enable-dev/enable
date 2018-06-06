@@ -1,0 +1,16 @@
+﻿$PBExportHeader$xhfl6jfzsumyi3nkus4xlpv3fmdw.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xhfl6jfzsumyi3nkus4xlpv3fmdw from structure
+                              long                                                         bisize
+   long                              biwidth
+   long                                                   biheight
+                        integer                                 biplanes
+                     integer                     bibitcount
+               long                     bicompression
+         long                                          bisizeimage
+                              long                           bixpelspermeter
+                              long                                 biypelspermeter
+                  long                                    biclrused
+                  long                     biclrimportant
+end type            
+

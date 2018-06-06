@@ -1,0 +1,20 @@
+﻿$PBExportHeader$xfubzf6rz4dlafdje59qznx.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xfubzf6rz4dlafdje59qznx from structure
+                           long                                    cbsize
+               long                           fmask
+                        long                                       hwnd
+      string                        lpverb
+                        string                           lpfile
+            string                                       lpparameters
+               string                              lpdirectory
+               long                              nshow
+   long                           hinstapp
+               long                                 lpidlist
+                           string                        lpclass
+                  long                                                      hkeyclass
+            long                                    hicon
+                     long                           hmonitor
+      long                                       hprocess
+end type         
+

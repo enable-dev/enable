@@ -1,0 +1,41 @@
+﻿$PBExportHeader$gf_isunicode.srf
+global type gf_isunicode from function_object
+end type
+
+forward prototypes
+global function boolean of_isunicode ()
+global function boolean gf_isunicode ()
+end prototypes
+
+global function boolean of_isunicode ();// returns if the current version is Unicode (true) or ANSI (false)
+
+boolean lb
+
+if len(blob("0"))=len("0") then
+	// ansi
+	lb = false
+else
+	// unicode
+	lb = true
+end if
+
+return lb
+
+end function
+
+global function boolean gf_isunicode ();// returns if the current version is Unicode (true) or ANSI (false)
+
+boolean lb
+
+if len(blob("0"))=len("0") then
+	// ansi
+	lb = false
+else
+	// unicode
+	lb = true
+end if
+
+return lb
+
+end function
+

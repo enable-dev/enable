@@ -1,0 +1,14 @@
+﻿$PBExportHeader$xkt9_crue1zdfq.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xkt9_crue1zdfq from structure
+      string                                 xq2q0s7t__0lyrf22z60j49q32k536
+                        powerobject                                          x92qersw1jlz4z5qrszqen38ef2
+                     string                           x55lf4dbu99n
+            string                                 x8eve975qe4zzwxz269v0etg
+                              integer                                             x39u6h4ld80p6sg6mhlrnffn_hnrff
+                        integer                                             si_x
+      integer                                             si_y
+                              integer                                             si_h
+                        integer            si_w
+end type         
+

@@ -1,0 +1,17 @@
+﻿$PBExportHeader$gf_enable_setparms.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type gf_enable_setparms from function_object
+end type                     
+
+forward prototypes
+global function powerobject gf_enable_setparms (any x0sdhtfqv94bc9[])
+end prototypes         
+
+global function powerobject gf_enable_setparms (any x0sdhtfqv94bc9[]);   
+x5kbs_0mls0uhfjgp3397mrp_g44dhr lstr
+lstr.xdqa2j090srfw913adkdpc0b6rhiu[] = x0sdhtfqv94bc9
+PowerObject lpo
+lpo = lstr                              
+return lpo
+end function               
+

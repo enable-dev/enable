@@ -1,0 +1,8 @@
+﻿$PBExportHeader$str_rs_graphcolor.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_rs_graphcolor from structure
+      long                                 fill
+                        long                                          line
+                     long                           shade
+end type            
+

@@ -1,0 +1,23 @@
+﻿$PBExportHeader$gf_enable_getparms.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type gf_enable_getparms from function_object
+end type                     
+
+forward prototypes
+global function integer gf_enable_getparms (ref any x0sdhtfqv94bc9[])
+end prototypes         
+
+global function integer gf_enable_getparms (ref any x0sdhtfqv94bc9[]);   
+
+any la[]
+x5kbs_0mls0uhfjgp3397mrp_g44dhr lstr
+if IsValid(Message.PowerObjectParm) and Not IsNull(Message.PowerObjectParm) then
+                              lstr = Message.PowerObjectParm
+               x0sdhtfqv94bc9 = lstr.xdqa2j090srfw913adkdpc0b6rhiu
+else
+                           
+                     x0sdhtfqv94bc9 = la
+end if               
+return upperbound(x0sdhtfqv94bc9)
+end function               
+

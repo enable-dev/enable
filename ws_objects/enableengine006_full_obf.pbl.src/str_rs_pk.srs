@@ -1,0 +1,6 @@
+﻿$PBExportHeader$str_rs_pk.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_rs_pk from structure
+      any                                 value[]
+end type                        
+

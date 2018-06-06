@@ -1,0 +1,1180 @@
+﻿$PBExportHeader$m_enable_sample.srm
+forward
+global type m_enable_sample from menu
+end type
+type m_file from menu within m_enable_sample
+end type
+type m_controls from menu within m_file
+end type
+type m_shareddatawindows from menu within m_file
+end type
+type m_presentationstyles from menu within m_file
+end type
+type m_graphandshareddatawindows from menu within m_file
+end type
+type m_1 from menu within m_file
+end type
+type m_printpreview from menu within m_file
+end type
+type m_6 from menu within m_file
+end type
+type m_esci from menu within m_file
+end type
+type m_file from menu within m_enable_sample
+m_controls m_controls
+m_shareddatawindows m_shareddatawindows
+m_presentationstyles m_presentationstyles
+m_graphandshareddatawindows m_graphandshareddatawindows
+m_1 m_1
+m_printpreview m_printpreview
+m_6 m_6
+m_esci m_esci
+end type
+type m_data from menu within m_enable_sample
+end type
+type m_firstrow from menu within m_data
+end type
+type m_previousrow from menu within m_data
+end type
+type m_nextrow from menu within m_data
+end type
+type m_lastrow from menu within m_data
+end type
+type m_data from menu within m_enable_sample
+m_firstrow m_firstrow
+m_previousrow m_previousrow
+m_nextrow m_nextrow
+m_lastrow m_lastrow
+end type
+type m_window from menu within m_enable_sample
+end type
+type m_cascade from menu within m_window
+end type
+type m_layer from menu within m_window
+end type
+type m_window from menu within m_enable_sample
+m_cascade m_cascade
+m_layer m_layer
+end type
+type m_0 from menu within m_enable_sample
+end type
+type m_language from menu within m_0
+end type
+type m_english from menu within m_language
+end type
+type m_italiano from menu within m_language
+end type
+type m_hrvatski from menu within m_language
+end type
+type m_español from menu within m_language
+end type
+type m_sample from menu within m_language
+end type
+type m_2 from menu within m_language
+end type
+type m_select from menu within m_language
+end type
+type m_language from menu within m_0
+m_english m_english
+m_italiano m_italiano
+m_hrvatski m_hrvatski
+m_español m_español
+m_sample m_sample
+m_2 m_2
+m_select m_select
+end type
+type m_11 from menu within m_0
+end type
+type m_about from menu within m_0
+end type
+type m_0 from menu within m_enable_sample
+m_language m_language
+m_11 m_11
+m_about m_about
+end type
+global type m_enable_sample from menu
+m_file m_file
+m_data m_data
+m_window m_window
+m_0 m_0
+end type
+end forward
+
+global type m_enable_sample from menu
+m_file m_file
+m_data m_data
+m_window m_window
+m_0 m_0
+end type
+global m_enable_sample m_enable_sample
+
+forward prototypes
+protected subroutine of_sendtoactivesheet (string as_event)
+end prototypes
+
+protected subroutine of_sendtoactivesheet (string as_event);////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// send an event to the active sheet
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+window	lw_frame, lw_sheet
+
+lw_frame = ParentWindow
+if IsValid (lw_frame) then
+	lw_sheet = lw_frame.GetActiveSheet()	
+	if IsValid (lw_sheet) then
+		lw_sheet.TriggerEvent (as_event)
+	end if
+end if
+end subroutine
+
+on m_enable_sample.create
+m_enable_sample=this
+call super::create
+this.text = "m_sample"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_file=create m_file
+this.m_data=create m_data
+this.m_window=create m_window
+this.m_0=create m_0
+this.Item[UpperBound(this.Item)+1]=this.m_file
+this.Item[UpperBound(this.Item)+1]=this.m_data
+this.Item[UpperBound(this.Item)+1]=this.m_window
+this.Item[UpperBound(this.Item)+1]=this.m_0
+end on
+
+on m_enable_sample.destroy
+call super::destroy
+destroy(this.m_file)
+destroy(this.m_data)
+destroy(this.m_window)
+destroy(this.m_0)
+end on
+
+type m_file from menu within m_enable_sample
+m_controls m_controls
+m_shareddatawindows m_shareddatawindows
+m_presentationstyles m_presentationstyles
+m_graphandshareddatawindows m_graphandshareddatawindows
+m_1 m_1
+m_printpreview m_printpreview
+m_6 m_6
+m_esci m_esci
+event create ( )
+event destroy ( )
+end type
+
+on m_file.create
+call super::create
+this.text = "&File"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_controls=create m_controls
+this.m_shareddatawindows=create m_shareddatawindows
+this.m_presentationstyles=create m_presentationstyles
+this.m_graphandshareddatawindows=create m_graphandshareddatawindows
+this.m_1=create m_1
+this.m_printpreview=create m_printpreview
+this.m_6=create m_6
+this.m_esci=create m_esci
+this.Item[UpperBound(this.Item)+1]=this.m_controls
+this.Item[UpperBound(this.Item)+1]=this.m_shareddatawindows
+this.Item[UpperBound(this.Item)+1]=this.m_presentationstyles
+this.Item[UpperBound(this.Item)+1]=this.m_graphandshareddatawindows
+this.Item[UpperBound(this.Item)+1]=this.m_1
+this.Item[UpperBound(this.Item)+1]=this.m_printpreview
+this.Item[UpperBound(this.Item)+1]=this.m_6
+this.Item[UpperBound(this.Item)+1]=this.m_esci
+end on
+
+on m_file.destroy
+call super::destroy
+destroy(this.m_controls)
+destroy(this.m_shareddatawindows)
+destroy(this.m_presentationstyles)
+destroy(this.m_graphandshareddatawindows)
+destroy(this.m_1)
+destroy(this.m_printpreview)
+destroy(this.m_6)
+destroy(this.m_esci)
+end on
+
+type m_controls from menu within m_file
+end type
+
+event clicked;window lw
+opensheet(lw, "w_control", ParentWindow, 0, Original!)
+end event
+
+on m_controls.create
+call super::create
+this.text = "Controls"
+this.microhelp = "Opens the Controls window"
+this.toolbaritemname = "UserObject5!"
+this.toolbaritemtext = "Window, Controls"
+this.toolbaritemorder = 2
+this.toolbaritemspace = 1
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_controls.destroy
+call super::destroy
+end on
+
+type m_shareddatawindows from menu within m_file
+end type
+
+event clicked;window lw
+opensheet(lw, "w_datawindow", ParentWindow, 0, Original!)
+end event
+
+on m_shareddatawindows.create
+call super::create
+this.text = "Shared Datawindows"
+this.microhelp = "Opens the Shared Datawindows window"
+this.toolbaritemname = "crosstab!"
+this.toolbaritemtext = "Window, Shared Datawindows"
+this.toolbaritemorder = 3
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_shareddatawindows.destroy
+call super::destroy
+end on
+
+type m_presentationstyles from menu within m_file
+end type
+
+event clicked;window lw
+opensheet(lw, "w_presentation_styles", ParentWindow, 0, Original!)
+end event
+
+on m_presentationstyles.create
+call super::create
+this.text = "Presentation Styles"
+this.microhelp = "Opens the Presentation Styles window"
+this.toolbaritemname = "createtable5!"
+this.toolbaritemtext = "Window, Presentation Styles"
+this.toolbaritemorder = 4
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_presentationstyles.destroy
+call super::destroy
+end on
+
+type m_graphandshareddatawindows from menu within m_file
+end type
+
+event clicked;window lw
+opensheet(lw, "w_shared_dw_graph", ParentWindow, 0, Original!)
+end event
+
+on m_graphandshareddatawindows.create
+call super::create
+this.text = "Graphs and Shared Datawindows"
+this.microhelp = "Opens the Graphs and Shared Datawindows window"
+this.toolbaritemname = "graph!"
+this.toolbaritemtext = "Window, Graphs and Shared Datawindows"
+this.toolbaritemorder = 5
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_graphandshareddatawindows.destroy
+call super::destroy
+end on
+
+type m_1 from menu within m_file
+event create ( )
+event destroy ( )
+end type
+
+on m_1.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_1.destroy
+call super::destroy
+end on
+
+type m_printpreview from menu within m_file
+end type
+
+on m_printpreview.create
+call super::create
+this.text = "Print Preview"
+this.microhelp = "Print preview of the current datawindow"
+this.toolbaritemname = "print!"
+this.toolbaritemtext = "Preview, Print Preview"
+this.toolbaritemorder = 6
+this.toolbaritemspace = 1
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_printpreview.destroy
+call super::destroy
+end on
+
+event clicked;of_sendtoactivesheet("ue_print")
+end event
+
+type m_6 from menu within m_file
+end type
+
+on m_6.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_6.destroy
+call super::destroy
+end on
+
+type m_esci from menu within m_file
+event create ( )
+event destroy ( )
+end type
+
+on m_esci.create
+call super::create
+this.text = "Exit~tAlt+F4"
+this.shortcut = 627
+this.microhelp = "Exits the sample application"
+this.toolbaritemname = "exit!"
+this.toolbaritemtext = "Exit"
+this.toolbaritemorder = 1
+this.menuitemtype = menuitemtypeexit!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_esci.destroy
+call super::destroy
+end on
+
+event clicked;HALT CLOSE
+
+end event
+
+type m_data from menu within m_enable_sample
+m_firstrow m_firstrow
+m_previousrow m_previousrow
+m_nextrow m_nextrow
+m_lastrow m_lastrow
+event create ( )
+event destroy ( )
+end type
+
+on m_data.create
+call super::create
+this.text = "&Data"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_firstrow=create m_firstrow
+this.m_previousrow=create m_previousrow
+this.m_nextrow=create m_nextrow
+this.m_lastrow=create m_lastrow
+this.Item[UpperBound(this.Item)+1]=this.m_firstrow
+this.Item[UpperBound(this.Item)+1]=this.m_previousrow
+this.Item[UpperBound(this.Item)+1]=this.m_nextrow
+this.Item[UpperBound(this.Item)+1]=this.m_lastrow
+end on
+
+on m_data.destroy
+call super::destroy
+destroy(this.m_firstrow)
+destroy(this.m_previousrow)
+destroy(this.m_nextrow)
+destroy(this.m_lastrow)
+end on
+
+type m_firstrow from menu within m_data
+event create ( )
+event destroy ( )
+end type
+
+on m_firstrow.create
+call super::create
+this.text = "&First Row"
+this.microhelp = "Go to the first row of the current datawindow"
+this.toolbaritemname = "vcrfirst!"
+this.toolbaritemtext = "First, First Row"
+this.toolbaritemorder = 7
+this.toolbaritemspace = 1
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_firstrow.destroy
+call super::destroy
+end on
+
+event clicked;of_sendtoactivesheet("ue_first")
+end event
+
+type m_previousrow from menu within m_data
+end type
+
+event clicked;of_sendtoactivesheet("ue_prior")
+
+end event
+
+on m_previousrow.create
+call super::create
+this.text = "&Previous Row"
+this.microhelp = "Go to the previous row of the current datawindow"
+this.toolbaritemname = "vcrprior!"
+this.toolbaritemtext = "Previous, Previous Row"
+this.toolbaritemorder = 8
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_previousrow.destroy
+call super::destroy
+end on
+
+type m_nextrow from menu within m_data
+end type
+
+event clicked;of_sendtoactivesheet("ue_next")
+
+end event
+
+on m_nextrow.create
+call super::create
+this.text = "&Next Row"
+this.microhelp = "Go to the next row of the current datawindow"
+this.toolbaritemname = "vcrnext!"
+this.toolbaritemtext = "Next, Next Row"
+this.toolbaritemorder = 9
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_nextrow.destroy
+call super::destroy
+end on
+
+type m_lastrow from menu within m_data
+event create ( )
+event destroy ( )
+end type
+
+on m_lastrow.create
+call super::create
+this.text = "&Last Row"
+this.microhelp = "Go to the last row of the current datawindow"
+this.toolbaritemname = "vcrlast!"
+this.toolbaritemtext = "Last, Last Row"
+this.toolbaritemorder = 10
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_lastrow.destroy
+call super::destroy
+end on
+
+event clicked;of_sendtoactivesheet("ue_last")
+
+end event
+
+type m_window from menu within m_enable_sample
+m_cascade m_cascade
+m_layer m_layer
+end type
+
+on m_window.create
+call super::create
+this.text = "&Window"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_cascade=create m_cascade
+this.m_layer=create m_layer
+this.Item[UpperBound(this.Item)+1]=this.m_cascade
+this.Item[UpperBound(this.Item)+1]=this.m_layer
+end on
+
+on m_window.destroy
+call super::destroy
+destroy(this.m_cascade)
+destroy(this.m_layer)
+end on
+
+type m_cascade from menu within m_window
+end type
+
+on m_cascade.create
+call super::create
+this.text = "&Cascade"
+this.microhelp = "Cascades all the sheets"
+this.toolbaritemname = "cascade!"
+this.toolbaritemtext = "Cascade"
+this.toolbaritemorder = 11
+this.toolbaritemspace = 1
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_cascade.destroy
+call super::destroy
+end on
+
+event clicked;////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Cascade open sheets
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+window	lw_frame
+
+lw_frame = ParentWindow
+if IsValid (lw_frame) then
+	lw_frame.ArrangeSheets (cascade!)
+end if
+end event
+
+type m_layer from menu within m_window
+end type
+
+on m_layer.create
+call super::create
+this.visible = false
+this.text = "&Layer"
+this.microhelp = "Layers all the sheets"
+this.toolbaritemvisible = false
+this.toolbaritemname = "layer!"
+this.toolbaritemtext = "Layer"
+this.toolbaritemorder = 12
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_layer.destroy
+call super::destroy
+end on
+
+event clicked;////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Layer open sheets
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+window	lw_frame
+
+lw_frame = ParentWindow
+if IsValid (lw_frame) then
+	lw_frame.ArrangeSheets (layer!)
+end if
+end event
+
+type m_0 from menu within m_enable_sample
+m_language m_language
+m_11 m_11
+m_about m_about
+event create ( )
+event destroy ( )
+end type
+
+on m_0.create
+call super::create
+this.text = "&?"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_language=create m_language
+this.m_11=create m_11
+this.m_about=create m_about
+this.Item[UpperBound(this.Item)+1]=this.m_language
+this.Item[UpperBound(this.Item)+1]=this.m_11
+this.Item[UpperBound(this.Item)+1]=this.m_about
+end on
+
+on m_0.destroy
+call super::destroy
+destroy(this.m_language)
+destroy(this.m_11)
+destroy(this.m_about)
+end on
+
+type m_language from menu within m_0
+m_english m_english
+m_italiano m_italiano
+m_hrvatski m_hrvatski
+m_español m_español
+m_sample m_sample
+m_2 m_2
+m_select m_select
+end type
+
+on m_language.create
+call super::create
+this.text = "Language"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_english=create m_english
+this.m_italiano=create m_italiano
+this.m_hrvatski=create m_hrvatski
+this.m_español=create m_español
+this.m_sample=create m_sample
+this.m_2=create m_2
+this.m_select=create m_select
+this.Item[UpperBound(this.Item)+1]=this.m_english
+this.Item[UpperBound(this.Item)+1]=this.m_italiano
+this.Item[UpperBound(this.Item)+1]=this.m_hrvatski
+this.Item[UpperBound(this.Item)+1]=this.m_español
+this.Item[UpperBound(this.Item)+1]=this.m_sample
+this.Item[UpperBound(this.Item)+1]=this.m_2
+this.Item[UpperBound(this.Item)+1]=this.m_select
+end on
+
+on m_language.destroy
+call super::destroy
+destroy(this.m_english)
+destroy(this.m_italiano)
+destroy(this.m_hrvatski)
+destroy(this.m_español)
+destroy(this.m_sample)
+destroy(this.m_2)
+destroy(this.m_select)
+end on
+
+type m_english from menu within m_language
+end type
+
+event clicked;n_enable.changelanguage(w_enable_sample, "EN")
+
+end event
+
+on m_english.create
+call super::create
+this.text = "English"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_english.destroy
+call super::destroy
+end on
+
+type m_italiano from menu within m_language
+end type
+
+event clicked;n_enable.changelanguage(w_enable_sample, "IT")
+
+end event
+
+on m_italiano.create
+call super::create
+this.text = "Italiano"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_italiano.destroy
+call super::destroy
+end on
+
+type m_hrvatski from menu within m_language
+end type
+
+event clicked;n_enable.changelanguage(w_enable_sample, "HR")
+
+end event
+
+on m_hrvatski.create
+call super::create
+this.text = "Hrvatski"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_hrvatski.destroy
+call super::destroy
+end on
+
+type m_español from menu within m_language
+end type
+
+event clicked;n_enable.changelanguage(w_enable_sample, "ES")
+
+end event
+
+on m_español.create
+call super::create
+this.text = "Español"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_español.destroy
+call super::destroy
+end on
+
+type m_sample from menu within m_language
+end type
+
+event clicked;n_enable.changelanguage(w_enable_sample, "_EX")
+
+end event
+
+on m_sample.create
+call super::create
+this.text = "Sample"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_sample.destroy
+call super::destroy
+end on
+
+type m_2 from menu within m_language
+end type
+
+on m_2.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_2.destroy
+call super::destroy
+end on
+
+type m_select from menu within m_language
+end type
+
+event clicked;opensheet(w_setlanguage, w_enable_sample, 0, Original!)
+end event
+
+on m_select.create
+call super::create
+this.text = "Select..."
+this.toolbaritemname = "custom042!"
+this.toolbaritemtext = "Language"
+this.toolbaritemorder = 5
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_select.destroy
+call super::destroy
+end on
+
+type m_11 from menu within m_0
+end type
+
+on m_11.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_11.destroy
+call super::destroy
+end on
+
+type m_about from menu within m_0
+end type
+
+on m_about.create
+call super::create
+this.text = "About"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_about.destroy
+call super::destroy
+end on
+
+event clicked;open(w_about_enable)
+
+end event
+

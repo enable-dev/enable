@@ -1,0 +1,12 @@
+﻿$PBExportHeader$xz_2hl5uvdun7r5ic1mfsfhp1.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xz_2hl5uvdun7r5ic1mfsfhp1 from structure
+                           unsignedinteger                                    wversion
+               unsignedinteger                           whighversion
+                        character                                       szdescription[257]
+      character                        szsystemstatus[129]
+                        unsignedinteger                           imaxsockets
+            unsignedinteger                                       imaxudpdg
+               longptr                              lpvenderinfo
+end type               
+

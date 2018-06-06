@@ -1,0 +1,17 @@
+﻿$PBExportHeader$x6qh9eremuieyb4d.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type x6qh9eremuieyb4d from function_object
+end type                           
+
+forward prototypes
+global function string x6qh9eremuieyb4d (string xkv44udm6b_45ea4d256dmqhi6wqys)
+end prototypes                        
+
+global function string x6qh9eremuieyb4d (string xkv44udm6b_45ea4d256dmqhi6wqys);            
+if isnull(xkv44udm6b_45ea4d256dmqhi6wqys) then
+               return ''
+else
+                        return xkv44udm6b_45ea4d256dmqhi6wqys
+end if   
+end function                        
+

@@ -1,0 +1,9 @@
+﻿$PBExportHeader$x7bc1ul5pki97zb0ej0te401jsky.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type x7bc1ul5pki97zb0ej0te401jsky from structure
+                              longptr                                                         hprocess
+   longptr                              hthread
+   long                                                   dwprocessid
+                        long                                 dwthreadid
+end type                     
+

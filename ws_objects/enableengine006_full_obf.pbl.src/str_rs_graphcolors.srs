@@ -1,0 +1,7 @@
+﻿$PBExportHeader$str_rs_graphcolors.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_rs_graphcolors from structure
+      str_rs_graphcolor                                 values
+                        str_rs_graphcolor                                          series[]
+end type                     
+

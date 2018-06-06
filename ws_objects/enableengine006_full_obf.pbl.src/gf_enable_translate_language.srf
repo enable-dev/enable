@@ -1,0 +1,23 @@
+﻿$PBExportHeader$gf_enable_translate_language.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type gf_enable_translate_language from function_object
+end type               
+
+forward prototypes
+global function string gf_enable_translate_language ()
+global function string gf_enable_translate_language (string xcc4bib9rynrg8zgw5egjp, string x0qe7zei2_511vhi03fp1x_ddtxgezm, string xbifx0b6fru97zh6qdrbiu)
+end prototypes                              
+
+global function string gf_enable_translate_language ();return ""                           
+end function      
+
+global function string gf_enable_translate_language (string xcc4bib9rynrg8zgw5egjp, string x0qe7zei2_511vhi03fp1x_ddtxgezm, string xbifx0b6fru97zh6qdrbiu);string ls, xktbdeb5dsthzz   
+ls = n_enable.GetLanguage()
+if n_enable.SetLanguage(xbifx0b6fru97zh6qdrbiu)=0 then
+                           xktbdeb5dsthzz = n_enable.translate_computed(xcc4bib9rynrg8zgw5egjp, x0qe7zei2_511vhi03fp1x_ddtxgezm)
+   n_enable.SetLanguage(ls)
+end if                     
+return xktbdeb5dsthzz                              
+
+end function               
+

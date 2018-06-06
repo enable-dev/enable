@@ -1,0 +1,13 @@
+﻿$PBExportHeader$str_rs_eprofile.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_rs_eprofile from structure
+      long                                 eprofile_id
+                        string                                          description
+                     string                           xnxzcyde9m1kczqppi_
+            string                                 cc
+                              string                                             bcc
+                        string                                             subject
+      string                                             text
+                              long                                             xgf965_8ba0jipsbb5i93wr2kff6
+end type                        
+

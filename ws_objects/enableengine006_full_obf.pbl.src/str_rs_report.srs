@@ -1,0 +1,9 @@
+﻿$PBExportHeader$str_rs_report.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_rs_report from structure
+      unsignedlong                                 report_id
+                        string                                          description
+                     string                           folders[]
+            boolean                                 isExternal
+end type                              
+

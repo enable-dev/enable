@@ -1,0 +1,14 @@
+﻿$PBExportHeader$str_db_table_attr.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type str_db_table_attr from structure
+                           long                                    table_id
+               string                           owner
+                        string                                       code
+      string                        description
+                        string                           hint
+            string                                       notes
+               long                              table_group_id
+               boolean                              hide
+   string                           xwan7a9xgn694_3eci42ii
+end type               
+

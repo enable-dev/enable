@@ -1,0 +1,21 @@
+﻿$PBExportHeader$x5h52n3s44ii_wbta2cdw.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type x5h52n3s44ii_wbta2cdw from structure
+                              long                                                         lstructsize
+   ulong                              hwnd
+   ulong                                                   hdc
+                        long                                 lplogfont
+                     long                     ipointsize
+               long                     flags
+         long                                          rgbcolors
+                              long                           lcustdata
+                              long                                 lpfnhook
+                  string                                    templatename
+                  ulong                     hinstance
+            string                           lpszstyle
+                     integer                           nfonttype
+            integer               missingalignment
+      long                                          nsizemin
+                  ulong                                          nsizelong
+end type               
+

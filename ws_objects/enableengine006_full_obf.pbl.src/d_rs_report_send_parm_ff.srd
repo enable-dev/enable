@@ -1,0 +1,18 @@
+﻿$PBExportHeader$d_rs_report_send_parm_ff.srd
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+release 9;
+datawindow(units=0 timer_interval=0 color=1073741824 processing=0 HTMLDW=no print.printername="" print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.buttons=no print.preview.buttons=no print.cliptext=no print.overrideprintjob=no print.collate=yes hidegrayline=no )
+header(height=0 color="536870912" )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=512 color="536870912" )
+table(column=(type=ulong updatewhereclause=no name=id dbname="id" )
+ column=(type=number updatewhereclause=no name=att_type dbname="att_type" initial="1" values="PDF	1/Excel	2/Advanced	3/" )
+ column=(type=number updatewhereclause=no name=att_adv_type dbname="att_adv_type" values="Tab-separated text (TXT)	3/Comma-separated values (CSV)	4/Powersoft Report (PSR)	5/XML	6/" )
+ )
+column(band=detail id=1 alignment="0" tabsequence=10 border="2" color="33554432" x="603" y="32" height="76" width="1984" format="[general]" html.valueishtml="0"  name=id visible="1" dddw.name=d_rs_eprofiles_dddw dddw.displaycolumn=description dddw.datacolumn=id dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.nilisnull=yes dddw.vscrollbar=yes dddw.autoretrieve=no  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="204" background.mode="2" background.color="1073741824" )
+text(band=detail alignment="1" text="E-mail Profile:" border="0" color="15793151" x="14" y="32" height="72" width="571" html.valueishtml="0"  name=description_t visible="1"  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="204" background.mode="2" background.color="8388608" )
+column(band=detail id=2 alignment="0" tabsequence=60 border="0" color="33554432" x="603" y="136" height="240" width="1216" format="[general]" html.valueishtml="0"  name=att_type visible="1" radiobuttons.columns=1 radiobuttons.scale=no radiobuttons.threed=yes  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="204" background.mode="1" background.color="553648127" )
+text(band=detail alignment="1" text="Attachment Type:" border="0" color="15793151" x="14" y="136" height="72" width="571" html.valueishtml="0"  name=att_type_t visible="1"  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="204" background.mode="2" background.color="8388608" )
+column(band=detail id=3 alignment="0" tabsequence=70 border="2" color="33554432" x="603" y="400" height="76" width="1499" format="[general]" html.valueishtml="0"  name=att_adv_type visible="1~tif(att_type = 3, 1, 0)" ddlb.limit=0 ddlb.allowedit=no ddlb.case=any ddlb.nilisnull=yes ddlb.vscrollbar=yes ddlb.useasborder=yes  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="204" background.mode="2" background.color="1073741824" )
+text(band=detail alignment="1" text="Advanced Type:" border="0" color="15793151" x="14" y="396" height="72" width="571" html.valueishtml="0"  name=att_adv_type_t visible="1~tif(att_type = 3, 1, 0)"  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="204" background.mode="2" background.color="8388608" )

@@ -1,0 +1,46 @@
+﻿$PBExportHeader$x_4phq0c_sag7kt4ej68p3s2ac90a.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type x_4phq0c_sag7kt4ej68p3s2ac90a from function_object
+end type                              
+
+forward prototypes
+global function long x_4phq0c_sag7kt4ej68p3s2ac90a (long values[])
+end prototypes      
+
+global function long x_4phq0c_sag7kt4ej68p3s2ac90a (long values[]);
+integer xgr2v2mj01f05dm0arnd2a, xndujaizn0fb_urnp, xiliamh1zz8qlr1pfjydn8k = 2
+long xfeul7rv70r5ef3rn1i24, xf8xnndjei5dbjuy240tsc9fjn, xyzx3vazhggg
+boolean b = false               
+xndujaizn0fb_urnp            = UpperBound(Values)
+If xndujaizn0fb_urnp < 2 Then 
+                           MessageBox("Error","This function needs 2 values!",StopSign!,Ok!)
+                  Return(-1)
+End If                           
+xfeul7rv70r5ef3rn1i24 = 0 
+xf8xnndjei5dbjuy240tsc9fjn = Values[1]
+if xf8xnndjei5dbjuy240tsc9fjn < 0 then
+                        xf8xnndjei5dbjuy240tsc9fjn -= 2^31
+                        b = true
+end if                           
+Do 
+         xyzx3vazhggg = Values[xiliamh1zz8qlr1pfjydn8k]
+               if xyzx3vazhggg < 0 then
+                                    xyzx3vazhggg -= 2^31
+                                       b = true
+                  end if                        
+      For xgr2v2mj01f05dm0arnd2a = 0 To 30
+                  If Mod(long(xf8xnndjei5dbjuy240tsc9fjn / 2^xgr2v2mj01f05dm0arnd2a), 2) <> 0 Or Mod(long(xyzx3vazhggg / (2^xgr2v2mj01f05dm0arnd2a)), 2) <> 0 Then
+                                             If Not Mod(long(xfeul7rv70r5ef3rn1i24 /  (2^xgr2v2mj01f05dm0arnd2a)), 2) <> 0 then
+                                                         xfeul7rv70r5ef3rn1i24 += 2^xgr2v2mj01f05dm0arnd2a
+                                          End If
+                     End If
+               Next   
+                        xf8xnndjei5dbjuy240tsc9fjn = xfeul7rv70r5ef3rn1i24
+                  xiliamh1zz8qlr1pfjydn8k++
+Loop Until xiliamh1zz8qlr1pfjydn8k > xndujaizn0fb_urnp                              
+if b then
+         xfeul7rv70r5ef3rn1i24 += 2^31 
+end if            
+Return(long(xfeul7rv70r5ef3rn1i24))
+end function                     
+

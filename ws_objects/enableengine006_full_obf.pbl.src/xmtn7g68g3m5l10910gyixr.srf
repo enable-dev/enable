@@ -1,0 +1,24 @@
+﻿$PBExportHeader$xmtn7g68g3m5l10910gyixr.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xmtn7g68g3m5l10910gyixr from function_object
+end type                              
+
+forward prototypes
+global function long xmtn7g68g3m5l10910gyixr (string xstxhfax55d4)
+end prototypes      
+
+global function long xmtn7g68g3m5l10910gyixr (string xstxhfax55d4);               
+long xv3q3n89quk_nfkfuq9d631w4578a
+choose case xstxhfax55d4
+            case "0" 
+                                             xv3q3n89quk_nfkfuq9d631w4578a = RGB(228,228,228)
+                           case "1" 
+                                                xv3q3n89quk_nfkfuq9d631w4578a = RGB(128,128,128)
+                           case "2" 
+                        xv3q3n89quk_nfkfuq9d631w4578a = RGB(255,0,0)
+               case "3" 
+                                          xv3q3n89quk_nfkfuq9d631w4578a = RGB(255,255,255)
+end choose                  
+return xv3q3n89quk_nfkfuq9d631w4578a                  
+end function                        
+

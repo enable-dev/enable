@@ -1,0 +1,30 @@
+﻿$PBExportHeader$gf_enable_addpictureitem.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type gf_enable_addpictureitem from function_object
+end type               
+
+forward prototypes
+global function integer gf_enable_addpictureitem (dragobject ago, string x2db6w2gwsj5mffbq, integer x79364bkuzb47vinkdp)
+end prototypes                              
+
+global function integer gf_enable_addpictureitem (dragobject ago, string x2db6w2gwsj5mffbq, integer x79364bkuzb47vinkdp);                           
+integer xqdxkthug0cp3rwr7i      
+choose case ago.typeof()
+   case picturelistbox! 
+                              picturelistbox xawihehcchxzs56
+                                                   xawihehcchxzs56 = ago
+                           xqdxkthug0cp3rwr7i = xawihehcchxzs56.additem(x2db6w2gwsj5mffbq, x79364bkuzb47vinkdp)
+                        xawihehcchxzs56.item[upperbound(xawihehcchxzs56.item[])+1] = x2db6w2gwsj5mffbq
+               xawihehcchxzs56.itempictureindex[upperbound(xawihehcchxzs56.itempictureindex[])+1] = x79364bkuzb47vinkdp
+               case dropdownpicturelistbox!
+               dropdownpicturelistbox xgg48kx9uqh_n3b
+               xgg48kx9uqh_n3b = ago
+                  xqdxkthug0cp3rwr7i = xgg48kx9uqh_n3b.additem(x2db6w2gwsj5mffbq, x79364bkuzb47vinkdp)
+                  xgg48kx9uqh_n3b.item[upperbound(xgg48kx9uqh_n3b.item[])+1] = x2db6w2gwsj5mffbq
+                                             xgg48kx9uqh_n3b.itempictureindex[upperbound(xgg48kx9uqh_n3b.itempictureindex[])+1] = x79364bkuzb47vinkdp
+                              case else
+                                       xqdxkthug0cp3rwr7i = -1
+end choose            
+return xqdxkthug0cp3rwr7i      
+end function                        
+

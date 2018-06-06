@@ -1,0 +1,20 @@
+﻿$PBExportHeader$xnhxl8l9p5t8wn4gvkhwdfa.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xnhxl8l9p5t8wn4gvkhwdfa from function_object
+end type                              
+
+forward prototypes
+global function x2u9d41bylwusyywzlk xnhxl8l9p5t8wn4gvkhwdfa (string xutjk787t6apizk9bsh5e01z3t, string xb6p15pc7sya, x2u9d41bylwusyywzlk xsq_1xaej7z2, x2u9d41bylwusyywzlk xu74znkesupvp2_pla2h2rdcdqkljq, x2u9d41bylwusyywzlk x14z630zbnztmkq78bmiai)
+end prototypes      
+
+global function x2u9d41bylwusyywzlk xnhxl8l9p5t8wn4gvkhwdfa (string xutjk787t6apizk9bsh5e01z3t, string xb6p15pc7sya, x2u9d41bylwusyywzlk xsq_1xaej7z2, x2u9d41bylwusyywzlk xu74znkesupvp2_pla2h2rdcdqkljq, x2u9d41bylwusyywzlk x14z630zbnztmkq78bmiai);x2u9d41bylwusyywzlk xkje956lf8zjag6mi08icwuyq1tb, xm9j65eve1a99ftn3k9l               
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[1] = xutjk787t6apizk9bsh5e01z3t
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[2] = xb6p15pc7sya
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[3] = xsq_1xaej7z2
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[4] = xu74znkesupvp2_pla2h2rdcdqkljq
+xkje956lf8zjag6mi08icwuyq1tb.x52dtrrkk04vzbmstcrck1p49mj3m[5] = x14z630zbnztmkq78bmiai            
+OpenWithParm(xnqgasqlw33w3taaha, xkje956lf8zjag6mi08icwuyq1tb)
+xm9j65eve1a99ftn3k9l = Message.PowerObjectParm                           
+return xm9j65eve1a99ftn3k9l
+end function                  
+

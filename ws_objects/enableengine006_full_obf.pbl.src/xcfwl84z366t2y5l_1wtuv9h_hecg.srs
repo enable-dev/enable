@@ -1,0 +1,7 @@
+﻿$PBExportHeader$xcfwl84z366t2y5l_1wtuv9h_hecg.srs
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xcfwl84z366t2y5l_1wtuv9h_hecg from structure
+                              xhfl6jfzsumyi3nkus4xlpv3fmdw                                                         bmiheader
+   unsignedlong                              bmicolors[]
+end type   
+

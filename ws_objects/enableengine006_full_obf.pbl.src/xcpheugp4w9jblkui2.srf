@@ -1,0 +1,79 @@
+﻿$PBExportHeader$xcpheugp4w9jblkui2.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type xcpheugp4w9jblkui2 from function_object
+end type               
+
+forward prototypes
+global subroutine xcpheugp4w9jblkui2 (string xl9j3z38m4tnvseayb23)
+end prototypes                              
+
+global subroutine xcpheugp4w9jblkui2 (string xl9j3z38m4tnvseayb23);longptr xy7v53brun6l
+longptr x5hchxvujwnc538z90a8                           
+      
+n_enable x5127gfpp_qm5tuyf
+if isvalid(n_enable) then
+   x5127gfpp_qm5tuyf = n_enable
+elseif isvalid(n_cs_engine) then
+                           x5127gfpp_qm5tuyf = n_cs_engine
+else
+   x5127gfpp_qm5tuyf = n_rs_engine
+end if                     
+longptr x4lzgxwz6yrplq921
+String xtes6m4ihg3udrr2xwc9js
+UInt xvv0x7y3x8tnuudyg                              
+
+xvv0x7y3x8tnuudyg = Long(xl9j3z38m4tnvseayb23)
+If xvv0x7y3x8tnuudyg = 0 Then
+               MessageBox("Edit Error", "Server Port is required!")
+            Return
+End If                     
+
+if x5127gfpp_qm5tuyf.iec.event xfzbasgziz22are937nay4akrw() <> 0 then return   
+
+x5127gfpp_qm5tuyf.iws.x6bi8w8fpdly04d21cgsfkcee0e()            
+xy7v53brun6l = x5127gfpp_qm5tuyf.iws.xvuz5_4kzrxzqhbek6_vc(xvv0x7y3x8tnuudyg)
+If xy7v53brun6l = 0 Then
+   MessageBox("Winsock Error in xvuz5_4kzrxzqhbek6_vc", x5127gfpp_qm5tuyf.iws.xmfz53and8wgpl91fncj1rvigwk())
+               Return
+Else
+            
+   
+   x5127gfpp_qm5tuyf.iws.xua8fzziuf53ax0y6uyk210przy(xy7v53brun6l, x5127gfpp_qm5tuyf.x7hw23wvzrq60eagrb901)
+End If            
+
+x5127gfpp_qm5tuyf.iec.event ue_designer_open()      
+x5127gfpp_qm5tuyf.xf14tw8mefrgikj3eibftd3ba('Start debug for incoming messages')            
+
+x5127gfpp_qm5tuyf.xx4lntijtr0hz_3u2 = True
+do while x5127gfpp_qm5tuyf.xx4lntijtr0hz_3u2
+               
+   x4lzgxwz6yrplq921 = x5127gfpp_qm5tuyf.iws.xzzwps1pm_kswaqs75nej4t37ne(xy7v53brun6l)
+                           If x4lzgxwz6yrplq921 > 0 Then
+                                                
+                                       x5127gfpp_qm5tuyf.iws.xua8fzziuf53ax0y6uyk210przy(x4lzgxwz6yrplq921, True)
+                  
+                                             If x5127gfpp_qm5tuyf.iws.xxlauxznqimbgh(x4lzgxwz6yrplq921, xtes6m4ihg3udrr2xwc9js) Then
+                                                                  x5127gfpp_qm5tuyf.xf14tw8mefrgikj3eibftd3ba('Received message: '+xtes6m4ihg3udrr2xwc9js)
+                                                         xtes6m4ihg3udrr2xwc9js = x5127gfpp_qm5tuyf.xj4p7xsw3z10m10ze_t43rv8e25p5fj(xtes6m4ihg3udrr2xwc9js)
+                                                                        
+                                                x5127gfpp_qm5tuyf.xf14tw8mefrgikj3eibftd3ba('Send to Designer: '+xtes6m4ihg3udrr2xwc9js)
+               If Not x5127gfpp_qm5tuyf.iws.xbgrwexxsunddfc4jzv0fb2a8(x4lzgxwz6yrplq921, xtes6m4ihg3udrr2xwc9js) Then                  
+                                                                                       x5127gfpp_qm5tuyf.xf14tw8mefrgikj3eibftd3ba("xbgrwexxsunddfc4jzv0fb2a8 Error: " + x5127gfpp_qm5tuyf.iws.xmfz53and8wgpl91fncj1rvigwk())
+                                                   Exit
+                                    End If
+                                       Else
+                                                   x5127gfpp_qm5tuyf.xf14tw8mefrgikj3eibftd3ba('! WRONG Receive message: '+x6qh9eremuieyb4d(xtes6m4ihg3udrr2xwc9js))
+                                                      Exit
+                                                   End If
+                                       
+                              x5127gfpp_qm5tuyf.iws.xmqn99unssajzw(x4lzgxwz6yrplq921)
+            End If
+                           
+               Yield()
+loop                        
+
+x5127gfpp_qm5tuyf.iec.event ue_designer_close()            
+x5127gfpp_qm5tuyf.xf14tw8mefrgikj3eibftd3ba('Stop debug for incoming messages')            
+x5127gfpp_qm5tuyf.iws.xmqn99unssajzw(xy7v53brun6l)
+end subroutine               
+

@@ -1,0 +1,558 @@
+﻿$PBExportHeader$x_vylajyma6g_1b3gxdjx5.srm
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+forward
+global type x_vylajyma6g_1b3gxdjx5 from menu
+end type
+type m_powerbuttons from menu within x_vylajyma6g_1b3gxdjx5
+end type
+type m_locate from menu within m_powerbuttons
+end type
+type m_0 from menu within m_powerbuttons
+end type
+type m_selectunselect from menu within m_powerbuttons
+end type
+type m_selectall from menu within m_powerbuttons
+end type
+type m_unselectall from menu within m_powerbuttons
+end type
+type m_selectdw from menu within m_powerbuttons
+end type
+type m_alltexts from menu within m_powerbuttons
+end type
+type m_allcolumns from menu within m_powerbuttons
+end type
+type m_resizebands from menu within m_powerbuttons
+end type
+type m_1 from menu within m_powerbuttons
+end type
+type m_undo from menu within m_powerbuttons
+end type
+type m_reset from menu within m_powerbuttons
+end type
+type m_close from menu within m_powerbuttons
+end type
+type m_powerbuttons from menu within x_vylajyma6g_1b3gxdjx5
+m_locate m_locate
+m_0 m_0
+m_selectunselect m_selectunselect
+m_selectall m_selectall
+m_unselectall m_unselectall
+m_selectdw m_selectdw
+m_alltexts m_alltexts
+m_allcolumns m_allcolumns
+m_resizebands m_resizebands
+m_1 m_1
+m_undo m_undo
+m_reset m_reset
+m_close m_close
+end type
+global type x_vylajyma6g_1b3gxdjx5 from menu
+m_powerbuttons m_powerbuttons
+end type
+end forward               
+
+global type x_vylajyma6g_1b3gxdjx5 from menu
+m_powerbuttons m_powerbuttons
+end type
+global x_vylajyma6g_1b3gxdjx5 x_vylajyma6g_1b3gxdjx5                              
+
+forward prototypes
+public subroutine x4llhdynr434jjx26e2tpgj5icn4aw3 (string xm5i6m_9kfzmxrfli)
+end prototypes                           
+
+public subroutine x4llhdynr434jjx26e2tpgj5icn4aw3 (string xm5i6m_9kfzmxrfli);window lw
+lw = ParentWindow
+lw.dynamic xm5upu7dexbnpa60jl1pd4gk22ssz( xm5i6m_9kfzmxrfli )
+end subroutine      
+
+on x_vylajyma6g_1b3gxdjx5.create
+x_vylajyma6g_1b3gxdjx5=this
+call super::create
+this.text = "x_vylajyma6g_1b3gxdjx5"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_powerbuttons=create m_powerbuttons
+this.Item[UpperBound(this.Item)+1]=this.m_powerbuttons
+end on   
+
+on x_vylajyma6g_1b3gxdjx5.destroy
+call super::destroy
+destroy(this.m_powerbuttons)
+end on                           
+
+type m_powerbuttons from menu within x_vylajyma6g_1b3gxdjx5
+m_locate m_locate
+m_0 m_0
+m_selectunselect m_selectunselect
+m_selectall m_selectall
+m_unselectall m_unselectall
+m_selectdw m_selectdw
+m_alltexts m_alltexts
+m_allcolumns m_allcolumns
+m_resizebands m_resizebands
+m_1 m_1
+m_undo m_undo
+m_reset m_reset
+m_close m_close
+end type   
+
+on m_powerbuttons.create
+call super::create
+this.text = "powerbuttons"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_locate=create m_locate
+this.m_0=create m_0
+this.m_selectunselect=create m_selectunselect
+this.m_selectall=create m_selectall
+this.m_unselectall=create m_unselectall
+this.m_selectdw=create m_selectdw
+this.m_alltexts=create m_alltexts
+this.m_allcolumns=create m_allcolumns
+this.m_resizebands=create m_resizebands
+this.m_1=create m_1
+this.m_undo=create m_undo
+this.m_reset=create m_reset
+this.m_close=create m_close
+this.Item[UpperBound(this.Item)+1]=this.m_locate
+this.Item[UpperBound(this.Item)+1]=this.m_0
+this.Item[UpperBound(this.Item)+1]=this.m_selectunselect
+this.Item[UpperBound(this.Item)+1]=this.m_selectall
+this.Item[UpperBound(this.Item)+1]=this.m_unselectall
+this.Item[UpperBound(this.Item)+1]=this.m_selectdw
+this.Item[UpperBound(this.Item)+1]=this.m_alltexts
+this.Item[UpperBound(this.Item)+1]=this.m_allcolumns
+this.Item[UpperBound(this.Item)+1]=this.m_resizebands
+this.Item[UpperBound(this.Item)+1]=this.m_1
+this.Item[UpperBound(this.Item)+1]=this.m_undo
+this.Item[UpperBound(this.Item)+1]=this.m_reset
+this.Item[UpperBound(this.Item)+1]=this.m_close
+end on                     
+
+on m_powerbuttons.destroy
+call super::destroy
+destroy(this.m_locate)
+destroy(this.m_0)
+destroy(this.m_selectunselect)
+destroy(this.m_selectall)
+destroy(this.m_unselectall)
+destroy(this.m_selectdw)
+destroy(this.m_alltexts)
+destroy(this.m_allcolumns)
+destroy(this.m_resizebands)
+destroy(this.m_1)
+destroy(this.m_undo)
+destroy(this.m_reset)
+destroy(this.m_close)
+end on                              
+
+type m_locate from menu within m_powerbuttons
+end type               
+
+on m_locate.create
+call super::create
+this.text = "Locate"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on            
+
+on m_locate.destroy
+call super::destroy
+end on                     
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('locate')
+end event   
+
+type m_0 from menu within m_powerbuttons
+end type            
+
+on m_0.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on   
+
+on m_0.destroy
+call super::destroy
+end on               
+
+type m_selectunselect from menu within m_powerbuttons
+end type            
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('select_unselect')
+end event   
+
+on m_selectunselect.create
+call super::create
+this.text = "Select/Unselect"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on   
+
+on m_selectunselect.destroy
+call super::destroy
+end on            
+
+type m_selectall from menu within m_powerbuttons
+end type      
+
+on m_selectall.create
+call super::create
+this.text = "Select All"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on            
+
+on m_selectall.destroy
+call super::destroy
+end on               
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('select_all')
+end event   
+
+type m_unselectall from menu within m_powerbuttons
+end type                           
+
+on m_unselectall.create
+call super::create
+this.text = "Unselect All"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                  
+
+on m_unselectall.destroy
+call super::destroy
+end on                              
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('unselect_all')
+end event                           
+
+type m_selectdw from menu within m_powerbuttons
+end type            
+
+on m_selectdw.create
+call super::create
+this.text = "Select DW"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on            
+
+on m_selectdw.destroy
+call super::destroy
+end on      
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('select_dw')
+end event                        
+
+type m_alltexts from menu within m_powerbuttons
+end type                     
+
+on m_alltexts.create
+call super::create
+this.text = "All Texts"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                              
+
+on m_alltexts.destroy
+call super::destroy
+end on      
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('all_texts')
+end event                              
+
+type m_allcolumns from menu within m_powerbuttons
+end type   
+
+on m_allcolumns.create
+call super::create
+this.text = "All Columns"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on                              
+
+on m_allcolumns.destroy
+call super::destroy
+end on                        
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('all_columns')
+end event                        
+
+type m_resizebands from menu within m_powerbuttons
+end type                        
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('resize_bands')
+end event                        
+
+on m_resizebands.create
+call super::create
+this.text = "Resize Bands"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on      
+
+on m_resizebands.destroy
+call super::destroy
+end on                        
+
+type m_1 from menu within m_powerbuttons
+end type                  
+
+on m_1.create
+call super::create
+this.text = "-"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on   
+
+on m_1.destroy
+call super::destroy
+end on   
+
+type m_undo from menu within m_powerbuttons
+end type         
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('undo')
+end event                  
+
+on m_undo.create
+call super::create
+this.text = "Undo"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on            
+
+on m_undo.destroy
+call super::destroy
+end on                  
+
+type m_reset from menu within m_powerbuttons
+end type                     
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('reset')
+end event                           
+
+on m_reset.create
+call super::create
+this.text = "Reset"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on         
+
+on m_reset.destroy
+call super::destroy
+end on                     
+
+type m_close from menu within m_powerbuttons
+end type   
+
+on m_close.create
+call super::create
+this.text = "Close"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on      
+
+on m_close.destroy
+call super::destroy
+end on                     
+
+event clicked;x4llhdynr434jjx26e2tpgj5icn4aw3('close')
+end event         
+

@@ -1,0 +1,22 @@
+﻿$PBExportHeader$x460638qjzak4yksk.srf
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+global type x460638qjzak4yksk from function_object
+end type               
+
+forward prototypes
+global subroutine x460638qjzak4yksk ()
+end prototypes                              
+
+global subroutine x460638qjzak4yksk ();
+n_enable x5127gfpp_qm5tuyf
+if isvalid(n_enable) then
+                           x5127gfpp_qm5tuyf = n_enable
+elseif isvalid(n_cs_engine) then
+      x5127gfpp_qm5tuyf = n_cs_engine
+else
+   x5127gfpp_qm5tuyf = n_rs_engine
+end if                           
+x5127gfpp_qm5tuyf.xx4lntijtr0hz_3u2 = false
+x5127gfpp_qm5tuyf.iws.xmqn99unssajzw(x5127gfpp_qm5tuyf.iws.xbnxqx92648htar72r2)
+end subroutine   
+

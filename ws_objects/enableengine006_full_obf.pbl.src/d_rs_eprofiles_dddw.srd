@@ -1,0 +1,19 @@
+﻿$PBExportHeader$d_rs_eprofiles_dddw.srd
+$PBExportComments$OBFUSCATED UNDISCLOSED SOURCE CODE. ©2016 Enable Development LTD. All rights reserved.
+release 9;
+datawindow(units=0 timer_interval=0 color=1073741824 processing=0 HTMLDW=no print.printername="" print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.buttons=no print.preview.buttons=no print.cliptext=no print.overrideprintjob=no print.collate=yes hidegrayline=no )
+header(height=0 color="536870912" )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=84 color="536870912" )
+table(column=(type=ulong updatewhereclause=yes name=id dbname="id" )
+ column=(type=char(100) updatewhereclause=yes name=description dbname="description" )
+ column=(type=ulong updatewhereclause=yes name=sort dbname="sort" )
+ column=(type=char(100) updatewhereclause=yes name=email_to dbname="email_to" )
+ column=(type=char(100) updatewhereclause=yes name=cc dbname="cc" )
+ column=(type=char(100) updatewhereclause=yes name=bcc dbname="bcc" )
+ column=(type=char(500) updatewhereclause=yes name=subject dbname="subject" )
+ column=(type=char(32000) updatewhereclause=yes name=text dbname="text" )
+ column=(type=ulong updatewhereclause=yes name=smtpserverid dbname="smtpserverid" )
+  sort="sort A " )
+column(band=detail id=2 alignment="0" tabsequence=10 border="0" color="33554432" x="9" y="4" height="76" width="2222" format="[general]" html.valueishtml="0"  name=description visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.nilisnull=yes edit.autohscroll=yes  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="204" background.mode="2" background.color="1073741824" )
